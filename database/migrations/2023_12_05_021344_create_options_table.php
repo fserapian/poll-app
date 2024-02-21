@@ -15,8 +15,7 @@ return new class extends Migration
         Schema::create('options', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-
-            $table->foreignIdFor(Poll::class);
+            $table->foreignIdFor(Poll::class)->constrained();
             $table->timestamps();
         });
     }
