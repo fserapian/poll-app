@@ -7,8 +7,8 @@ use Livewire\Component;
 
 class CreatePoll extends Component
 {
-    public array $options = ['First'];
     public string $title = '';
+    public array $options = ['First'];
 
     protected array $rules = [
         'title' => 'required|min:3|max:255',
@@ -23,6 +23,11 @@ class CreatePoll extends Component
             'max' => 'Can\'t be more than 255 characters',
         ],
     ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
 
     public function render()
     {

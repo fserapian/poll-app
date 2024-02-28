@@ -17,7 +17,7 @@
                         <button class="btn" wire:click="removeOption({{ $index }})">Remove</button>
                     </div>
                     @error("options.{$index}")
-                    <div class="text-red-500">{{ $message }}</div>
+                        <div class="text-red-500">{{ $message }}</div>
                     @enderror
                 </div>
             @endforeach
