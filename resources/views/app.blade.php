@@ -31,7 +31,15 @@
 
         @livewireStyles
 
-        @livewire('create-poll')
+        <div>
+            <h2 class="my-4 text-xl font-bold">Create Poll</h2>
+            @livewire('create-poll')
+        </div>
+
+        <div>
+            <h2 class="my-4 text-xl font-bold">Available Polls</h2>
+            @livewire('polls')
+        </div>
     </head>
 
     <body class="container mx-auto mt-10 mb-10 max-w-lg">
